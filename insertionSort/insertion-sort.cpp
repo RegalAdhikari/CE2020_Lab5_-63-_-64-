@@ -6,24 +6,24 @@ using namespace std;
 int main()
 {
     int n, j, temp;
-    cout<<"\nEnter the length of array to be randomly generated :\n";
+    cout<<"\nElements of randomly generated array :\n";
     srand(time(0));
-    // cin>>n;
     n=5;
-    int arr[5];
+    int arr[n];
     for (int i = 0; i < n; i++)
     {   
         arr[i] = rand();
     }
     for (int i = 0; i < n; i++)
     {
-        cout<<arr[i]<<" ";
+        cout<<arr[i] <<" ";
     }
+
     for (int m = 0; m < n; m++)
     {
         for (int i = 0; i < n; i++)
         {
-            j=j+1;
+            j=i+1;
             if (arr[i]>arr[j])
             {
                 temp = arr[i];
@@ -32,9 +32,10 @@ int main()
             }
         }
     }
+    cout<<"\nSorted: ";
      for (int i = 0; i < n; i++)
     {
-        cout<<arr[i];
+        cout<<arr[i]<<" ";
     }
-    cout<<"\nSorted: ";
+
 }
